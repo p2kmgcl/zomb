@@ -1,0 +1,154 @@
+html,
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(0deg, #220000 0%, #400303 100%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 60ch;
+  padding: 16px 32px;
+}
+
+.h1 {
+  left: -99999px;
+  position: absolute;
+  top: -99999px;
+}
+
+.board {
+  background: linear-gradient(0deg, #740707 0%, #220000 100%);
+  background-clip: content-box;
+  border: solid rgba(255, 255, 255, 0.1) 8px;
+  border-radius: 24px;
+  padding-top: 135%;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: 1;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-text {
+  color: rgba(255, 255, 255, 0.5);
+  content: attr(data-card-text);
+  font-size: 200px;
+  font-weight: 900;
+  font-family: 'Inknut Antiqua';
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  text-shadow: 8px 8px 0 #740707, -8px -8px 0 #220000;
+  top: 50%;
+  transform: translateX(-50%) translateY(-65%);
+}
+
+.form {
+  margin-bottom: 1rem;
+}
+
+.difficulty {
+  background-clip: content-box;
+  background-color: #220000;
+  border: solid rgba(255, 255, 255, 0.1) 8px;
+  border-radius: 32px;
+  display: block;
+  margin-top: 8px;
+}
+
+.difficulty-input {
+  display: block;
+  border-radius: 32px;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0.3;
+}
+
+.difficulty-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.difficulty-text {
+  left: -99999px;
+  position: absolute;
+  top: -99999px;
+}
+
+.draw-button {
+  display: block;
+  border-radius: 32px;
+  padding: 1rem;
+  background: #740707;
+  border: solid rgba(255, 255, 255, 0.1) 8px;
+  box-shadow: inset 0 15px 15px rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 18px;
+  font-family: 'Montserrat Subrayada';
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.draw-button:focus {
+  border: solid rgba(255, 255, 255, 0.3) 8px;
+  box-shadow: inset 0 20px 20px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.draw-button:hover {
+  box-shadow: inset 0 20px 20px rgba(255, 255, 255, 0.25);
+}
+
+.draw-button:active {
+  box-shadow: inset 0 -10px 10px rgba(255, 255, 255, 0.15);
+}
+
+.aside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.count {
+  margin: 0;
+  color: #888;
+  font-weight: 700;
+  font-size: 10px;
+  font-family: 'Montserrat Subrayada';
+}
+
+.count-value {
+  font-family: 'Zilla Slab Highlight';
+  font-size: 14px;
+  color: #aaa;
+}

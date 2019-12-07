@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Zomb</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#740707" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="favicon/favicon-48.png"
+    />
+    <link rel="apple-touch-icon" href="favicon/favicon-192.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inknut+Antiqua:900|Montserrat+Subrayada:700|Zilla+Slab+Highlight:700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="h1">Carta en juego</h1>
+      <div class="board" id="board">
+        <figure class="card" id="card">
+          <img
+            class="card-image"
+            aria-live="assertive"
+            alt="No ocurre nada."
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuMAAAQNCAQAAABd6oznAAALBUlEQVR42u3UQREAAAzCsOHf9HRwJBL6aA6AYpEAwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYlALBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxCQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsXAIAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAG5cAwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYlALBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxCQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsXAIAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAG5cAwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYlALBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcABsHsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxCQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQBsHMDGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBsHEAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB8DGAWwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsXAIAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBwAGwewcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxAGwcwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgGwcQAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHwMYBbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAbBzAxgGwcQBsHAAbB7BxAGwcABsHsHEAbBwAGwfAxgFsHAAbB8DGAbBxABsHwMYBsHEAG5cAwMYBsHEAbBxgzAM4DAQOjlJuwgAAAABJRU5ErkJggg=="
+          />
+
+          <span role="presentation" class="card-text"></span>
+        </figure>
+      </div>
+
+      <form class="form">
+        <label
+          id="difficulty"
+          class="difficulty"
+          style="background-image: linear-gradient(90deg, #0074D9 0%, transparent 23.5%)"
+        >
+          <div aria-live="polite" aria-atomic="true" class="difficulty-text">
+            Nivel de dificultad: <span id="difficultyText">azul</span>.
+          </div>
+          <input
+            class="difficulty-input"
+            id="difficultyInput"
+            type="range"
+            min="0"
+            max="3"
+            step="1"
+            value="0"
+          />
+        </label>
+
+        <button id="drawButton" class="draw-button" type="button">
+          Robar otra carta
+        </button>
+      </form>
+    </main>
+
+    <aside class="aside">
+      <h1 class="h1">Otras cartas</h1>
+      <p class="count">
+        Cartas en el mazo:
+        <span class="count-value" id="deckCount">54</span>.
+      </p>
+      <p class="count">
+        Cartas descartadas:
+        <span class="count-value" id="discardCount">0</span>.
+      </p>
+    </aside>
+
+    <script src="index.ts"></script>
+  </body>
+</html>

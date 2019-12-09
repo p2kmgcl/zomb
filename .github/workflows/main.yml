@@ -1,0 +1,23 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: NPM install
+      run: npm install
+    - name: Build project
+      run: npm run build
+    - name: Copy static files
+      run: cp public/* dist/
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1.2.5
+      with:
+        target_branch: gh-pages
+        keep_history: true
+        allow_empty_commit: false
+        build_dir: dist
+        committer_name: Pablo Molina
+        committer_email: contact@pablomolina.me
+        commit_message: update

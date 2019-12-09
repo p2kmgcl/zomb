@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to gh-pages
 on: [push]
 jobs:
   build:
@@ -12,6 +12,7 @@ jobs:
     - name: Copy static files
       run: cp public/* dist/
     - name: GitHub Pages
+      if: success()
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
         target_branch: gh-pages
@@ -21,3 +22,5 @@ jobs:
         committer_name: Pablo Molina
         committer_email: contact@pablomolina.me
         commit_message: update
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
